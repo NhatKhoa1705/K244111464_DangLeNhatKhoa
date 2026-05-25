@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <meta charset ='utf-8'>
+        <title> tiêu đề </title>
+        
+    </head>
+    <body style="background-color:aquamarine">
+        <h2 style="color: red;">Online Classfields Search Form</h2>
+        <hr/>
+        <form>
+            <table>
+                <tr>
+                    <td colspan="2"><strong>1) Search for a classified in the following sections:</strong></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label><input type="radio" name="section" value="employment" checked="checked"> Employment</label>
+                        <label><input type="radio" name="section" value="personal"> Personal</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label><input type="radio" name="section" value="for_sale"> For Sale</label>
+                        <label><input type="radio" name="section" value="miscellaneous"> Miscellaneous</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label><input type="radio" name="section" value="housing"> Housing</label>
+                        <label><input type="radio" name="section" value="all_of_the_above"> All of the Above</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><strong>2) Search the following publications:</strong></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label><input type="checkbox" name="publication" value="midwest_times"> Midwest Times</label>
+                        <label><input type="checkbox" name="publication" value="modern_news"> Modern News</label>
+                        <label><input type="checkbox" name="publication" value="employment_today"> Employment Today</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label><input type="checkbox" name="publication" value="great_lakes_classifieds"> Great Lakes Classifieds</label>
+                        <label><input type="checkbox" name="publication" value="middleton_daily"> Middleton Daily</label>
+                        <label><input type="checkbox" name="publication" value="cashtown_daily_news"> Cashtown Daily News</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><strong>3) From to</strong> <input type="date" name="from_date" size="10" placeholder="mm/dd/yy"> <strong>to</strong> <input type="date" name="to_date" size="10" placeholder="mm/dd/yy"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><strong>4) Enter a few keywords to describe the classified.</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" name="keywords" style="width:100%;"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><strong>5) Click one of the options below:</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="image" src="images/Search.gif" width="80">
+                        <input type="image" src="images/Help.gif" width="80"
+                        onclick="alert('Help Button Clicked!')">
+                        <input type="image" src="images/Cancel.gif" width="80"
+                        onclick="this.form.reset()">
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+    </body>
+</html>
