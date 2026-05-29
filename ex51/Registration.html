@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+    </head>
+    <body style="background-color: #20b2abd3;">
+        <div style="text-align:center">
+            <img src="images/Logo.gif">
+        </div>
+        <h1 style="text-align:center; color:white;">Newborn Registration</h1> 
+        <form name="Registration">
+            <p>
+                Date:
+                <input type="date" name="date" id="date"/>
+            </p>
+            <p>
+                1&rpar;Infant's first name:
+                <input type="text" name="firstname" id="firstname"/>
+                Last:
+                <input type="text" name="lastname" id="lastname"/>
+            </p>
+            <p>
+                2&rpar; Medical Record#:
+                <input type="text" name="record" id="record"/>
+            </p>
+            <p>
+                3&rpar; Date of birth:
+                <input type="date" name="dob" id="dob"/>
+            </p>
+            <p>
+                4&rpar; Birth weight:
+                <input type="text" name="weight" id="weight"/>
+            </p>
+            <p>
+                5&rpar; APGAR score:
+                <input type="text" name="apgar" id="apgar"/>
+            </p>
+            <p>
+                6&rpar; Mother's first name:
+                <input type="text" name="mfirstname" id="mfirstname"/>
+                Last:
+                <input type="text" name="mlastname" id="mlastname"/>
+            </p>
+            <p>
+                7&rpar;Father's first name:
+                <input type="text" name="ffirstname" id="ffirstname"/>
+                Last:
+                <input type="text" name="flastname" id="flastname"/>
+            </p>
+            <p>
+                8&rpar; Physician(check all that apply):
+                <select size="5">
+                    <option value="Dr.Warren Albert">Dr.Warren Albert</option>
+                    <option value="Dr.Maria Alvarez">Dr.Maria Alvarez</option>
+                    <option value="Dr.John Anderson">Dr.John Anderson</option>
+                    <option value="Dr.Linda Baker">Dr.Linda Baker</option>
+                    <option value="Dr.Michael Kerry">Dr.Michael Kerry</option>
+                </select>
+                <p align="center">
+                    <button type="submit" onclick="Register()">Register</button>
+                    <button type="reset">Cancel</button>
+            </p>
+        </form>
+    </body>
+</html>
