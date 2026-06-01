@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>GPA</title>
+        <script>
+            function getpercentages(course) {
+                var course=document.getElementById("course").value;
+                if (course=="1")
+            {
+                qtpercent.innerHTML="30%";
+                gkpercent.innerHTML="20%";
+                ckpercent.innerHTML="50%";
+                talentpercent.innerHTML="-";
+            }
+            else if (course=="2")
+            {
+                qtpercent.innerHTML="25%";
+                gkpercent.innerHTML="25%";
+                ckpercent.innerHTML="50%";
+                talentpercent.innerHTML="-";
+            }
+            else if (course=="3")
+            {
+                qtpercent.innerHTML="15%";
+                gkpercent.innerHTML="20%";
+                ckpercent.innerHTML="50%";
+                talentpercent.innerHTML="15%";
+            }
+
+            }
+            function calculateGPA() 
+            {
+                getpercentages();
+                var course=document.getElementById("course").value;
+                var qt=eval(myForm.qt.value);
+                var gk=eval(myForm.gk.value);
+                var ck=eval(myForm.ck.value);
+                var talent=eval(myForm.talent.value);
+                var gpa;
+                if (course=="1")
+            {
+                gpa=(qt*0.3)+(gk*0.2)+(ck*0.5);
+            }
+            else if (course=="2")
+            {
+                gpa=(qt*0.25)+(gk*0.25)+(ck*0.5);
+            }
+            else if (course=="3")
+            {
+                gpa=(qt*0.15)+(gk*0.2)+(ck*0.5)+(talent*0.15);
+            }
+            myForm.gpa.value=gpa.toFixed(2);
+            }
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align:center">GPA Calculator</h1>
+        <form name="myForm">
+            <table border="1" cellpadding="5">
+                <tr>
+                    <td><h3>Select Course:</h3></td>
+                    <td>
+                        <select id="course" name="course" onchange="getpercentages()">
+                            <option value="1">Course 1</option>
+                            <option value="2">Course 2</option>
+                            <option value="3">Course 3</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>QT</td>
+                    <td>
+                        <input type="text" name="qt">
+                        <span id="qtpercent">%</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>GK</td>
+                    <td>
+                        <input type="text" name="gk">
+                        <span id="gkpercent">%</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CK</td>
+                    <td>
+                        <input type="text" name="ck">
+                        <span id="ckpercent">%</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Talent</td>
+                    <td>
+                        <input type="text" name="talent">
+                        <span id="talentpercent">%</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align:center">
+                        <input type="button" value="Calculate GPA" onclick="calculateGPA()">
+                        <input type="reset" value="Clear">
+                    </td>
+                </tr>
+                <tr>
+                    <td>GPA:</td>
+                    <td><input type="text" name="gpa"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
