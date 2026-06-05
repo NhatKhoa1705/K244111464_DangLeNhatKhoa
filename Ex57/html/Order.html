@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Order Form</title>
+        <script src="../js/main.js"></script>
+    </head>
+
+    <body>
+        <form name="myform">
+            <div style="border:1px black solid;width:600px;">
+            <table border="0" cellpadding="5">
+                <tr>
+                    <th>Part Number</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Item Total</th>
+                </tr>
+
+                <tr>
+                    <td>C112</td>
+                    <td>Mouse</td>
+                    <td>19.95$</td>
+                    <td>
+                        <input type="text" id="qty1"
+                        oninput="calculate(19.95,qty1.value,'item1')">
+                    </td>
+                    <td>
+                        <input type="text" id="item1" readonly>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>B124</td>
+                    <td>Keyboard US</td>
+                    <td>29.95$</td>
+                    <td>
+                        <input type="text" id="qty2"
+                        oninput="calculate(29.95,qty2.value,'item2')">
+                    </td>
+                    <td>
+                        <input type="text" id="item2" readonly>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>U125</td>
+                    <td>USB KingMax</td>
+                    <td>39.95$</td>
+                    <td>
+                        <input type="text" id="qty3"
+                        oninput="calculate(39.95,qty3.value,'item3')">
+                    </td>
+                    <td>
+                        <input type="text" id="item3" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" align="right">
+                        Total:
+                    </td>
+                    <td>
+                        <input type="text" id="total" readonly>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="5" align="right">
+                        <button type="button" onclick="sum()">
+                            Sum
+                        </button>
+                    </td>
+                </tr>
+
+            </table>
+            </div>
+        </form>
+    </body>
+</html>
