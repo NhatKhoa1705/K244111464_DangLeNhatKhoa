@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Tiêu đề trang</title>
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    <body>
+        <table id="tablstudents" >
+            <thead>
+                <tr>
+                    <td colspan="4" style="background-color: yellow; color: black; font-weight: bold; text-align: center;"> List of Student</td>
+                </tr>
+                <tr>
+                <th onclick="sortTable(0)">Student ID</th>
+                <th onclick="sortTable(1)">Student Name</th>
+                <th onclick="sortTable(2)">Birthday</th>
+                <th onclick="sortTable(3)">Gender</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            </tbody>
+    </table>
+
+    <div id="detailPage">
+        <table border="1">
+            <tr>
+                <td colspan="2" class="table-title">Student Information</td>
+            </tr>
+            <tr>
+                <th>Student ID</th>
+                <td><span id="detId"></span></td>
+            </tr>
+            <tr>
+                <th>Student Name</th>
+                <td><span id="detName"></span></td>
+            </tr>
+            <tr>
+                <th>Birthday</th>
+                <td><span id="detDob"></span></td>
+            </tr>
+            <tr>
+                <th>Gender</th>
+                <td><span id="detGender"></span></td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="js/students.js"></script>
+    <script>
+        load_student_fromxml('students.xml');
+    </script>
+</body>
+</html>
